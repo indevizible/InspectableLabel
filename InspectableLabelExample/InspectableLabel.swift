@@ -9,65 +9,63 @@
 import UIKit
 
 @IBDesignable
-class InspectableLabel: UILabel {
+public class InspectableLabel: UILabel {
     
     @IBInspectable
-    var charSpacing: CGFloat? {
+    public var charSpacing: CGFloat = 0.0 {
         didSet {
             updateView()
         }
     }
     
     @IBInspectable
-    var lineSpacing: CGFloat? {
+    public var lineSpacing: CGFloat = 0.0{
         didSet {
             updateView()
         }
     }
     
     @IBInspectable
-    var paragraphSpacing: CGFloat? {
+    public var paragraphSpacing: CGFloat = 0.0 {
         didSet {
             updateView()
         }
     }
     
-    override func awakeFromNib() {
+    public override func prepareForInterfaceBuilder() {
         updateView()
     }
+    
 
-    override func drawRect(rect: CGRect) {
-        super.drawRect(CGRect(origin: CGPointZero, size: rect.size))
+    public override func drawRect(rect: CGRect) {
         updateView()
     }
     
-    func updateView() {
-        if  text == nil  {
-            text = ""
-        }
+    public func updateView() {
+        
         let paragraph = NSMutableParagraphStyle()
+        
         paragraph.alignment = textAlignment
+
+        paragraph.minimumLineHeight = lineSpacing
         
-        if let minimumLineHeight = lineSpacing {
-            paragraph.minimumLineHeight = minimumLineHeight
-        }
+        paragraph.paragraphSpacingBefore = paragraphSpacing
         
-        if let paragraphSpacing = paragraphSpacing {
-            paragraph.paragraphSpacingBefore = paragraphSpacing
-        }
 
         var attr = [NSFontAttributeName:font,
             NSParagraphStyleAttributeName: paragraph,
             NSForegroundColorAttributeName: textColor
         ]
         
-        if let kern = charSpacing {
-            attr[NSKernAttributeName] = kern
-        }
 
-        let attrString = NSAttributedString(string: text!, attributes:attr)
-        attributedText = attrString
+        attr[NSKernAttributeName] = charSpacing
+        
+        if let text = text {
+            attributedText = NSAttributedString(string: text, attributes:attr)
+        }
+        
+        attributedText?.drawInRect(CGRect(origin: CGPointZero, size: frame.size))
         
     }
-
+    
 }

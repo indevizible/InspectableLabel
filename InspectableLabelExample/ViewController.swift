@@ -12,9 +12,13 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var label: InspectableLabel!
     
+    @IBOutlet weak var ความสูง: NSLayoutConstraint!
+    
     @IBOutlet weak var secndLbl: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+
         // Do any additional setup after loading the view, typically from a nib.
         
     }

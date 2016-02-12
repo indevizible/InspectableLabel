@@ -31,13 +31,6 @@ public class InspectableLabel: UILabel {
         }
     }
     
-    @IBInspectable
-    public var y: CGFloat = 0 {
-        didSet{
-            updateView()
-        }
-    }
-    
     public override func prepareForInterfaceBuilder() {
         updateView()
     }
@@ -72,9 +65,7 @@ public class InspectableLabel: UILabel {
             attributedText = NSAttributedString(string: text, attributes:attr)
         }
         
-        
-//        attributedText?.drawWithRect(frame, options: [.UsesFontLeading,.UsesLineFragmentOrigin], context: nil)
-        attributedText?.drawInRect(CGRect(origin: CGPointZero, size: frame.size))
+        attributedText?.drawInRect(CGRect(origin: CGPoint(x: 0, y: font.ascender - font.capHeight), size: frame.size))
         
     }
     

@@ -3,7 +3,13 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="DB Heavent Li v3.2.ttf">
+            <string>DBHeaventt-Light</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -24,42 +30,35 @@
                                     <action selector="manualUpdate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IgT-GP-WO3"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p0x-EX-lXZ">
-                                <rect key="frame" x="200" y="80" width="200" height="116"/>
-                                <color key="backgroundColor" red="0.71822376519999998" green="0.74986636640000004" blue="0.69267394510000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <string key="text">Sean Penn Reportedly "Under Investigation" 
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V7j-4I-vOT" customClass="InspectableLabel" customModule="InspectableLabelExample" customModuleProvider="target">
+                                <rect key="frame" x="206" y="271" width="189" height="202"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="202" id="D1x-5i-6XV"/>
+                                    <constraint firstAttribute="width" constant="189" id="Fzm-mO-Gmm"/>
+                                </constraints>
+                                <string key="text">Sean Penn Reportedly
+"Under Investigation" 
 for El Chapo Interview</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" name="DBHeaventt-Light" family="DB Heavent" pointSize="26"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vsW-bt-cJA" customClass="InspectableLabel" customModule="InspectableLabelExample" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="80" width="200" height="116"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Sean Penn Reportedly "Under Investigation" 
-for El Chapo Interview</string>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="charSpacing">
-                                        <real key="value" value="0.0"/>
-                                    </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="lineSpacing">
-                                        <real key="value" value="19"/>
+                                        <real key="value" value="28"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="paragraphSpacing">
-                                        <real key="value" value="6"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="y">
+                                        <real key="value" value="12"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="V7j-4I-vOT" secondAttribute="baseline" constant="137" id="g70-Ml-IRz"/>
+                            <constraint firstItem="V7j-4I-vOT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sm8-go-GTE"/>
+                        </constraints>
                     </view>
-                    <connections>
-                        <outlet property="label" destination="vsW-bt-cJA" id="6aB-jm-OMb"/>
-                        <outlet property="secndLbl" destination="p0x-EX-lXZ" id="s1B-U6-Cf7"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

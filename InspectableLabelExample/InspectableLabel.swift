@@ -1,6 +1,5 @@
 //
 //  InspectableLabel.swift
-//  HollywoodReporter
 //
 //  Created by Nattawut Singhchai on 2/11/16.
 //  Copyright © 2016 Nattawut Singhchai. All rights reserved.
@@ -32,6 +31,13 @@ public class InspectableLabel: UILabel {
         }
     }
     
+    @IBInspectable
+    public var y: CGFloat = 0 {
+        didSet{
+            updateView()
+        }
+    }
+    
     public override func prepareForInterfaceBuilder() {
         updateView()
     }
@@ -49,6 +55,8 @@ public class InspectableLabel: UILabel {
 
         paragraph.minimumLineHeight = lineSpacing
         
+        paragraph.maximumLineHeight = lineSpacing
+        
         paragraph.paragraphSpacingBefore = paragraphSpacing
         
 
@@ -64,6 +72,8 @@ public class InspectableLabel: UILabel {
             attributedText = NSAttributedString(string: text, attributes:attr)
         }
         
+        
+//        attributedText?.drawWithRect(frame, options: [.UsesFontLeading,.UsesLineFragmentOrigin], context: nil)
         attributedText?.drawInRect(CGRect(origin: CGPointZero, size: frame.size))
         
     }

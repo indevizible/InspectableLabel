@@ -13,6 +13,7 @@
 		901903211C6DADAF00B6269D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 901903201C6DADAF00B6269D /* Assets.xcassets */; };
 		901903241C6DADAF00B6269D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 901903221C6DADAF00B6269D /* LaunchScreen.storyboard */; };
 		9019032C1C6DADB800B6269D /* InspectableLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9019032B1C6DADB800B6269D /* InspectableLabel.swift */; };
+		90268F241C6DDBD1002B657E /* DB Heavent Li v3.2.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 90268F231C6DDBCE002B657E /* DB Heavent Li v3.2.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		901903231C6DADAF00B6269D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		901903251C6DADAF00B6269D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9019032B1C6DADB800B6269D /* InspectableLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InspectableLabel.swift; sourceTree = "<group>"; };
+		90268F231C6DDBCE002B657E /* DB Heavent Li v3.2.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DB Heavent Li v3.2.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		901903181C6DADAF00B6269D /* InspectableLabelExample */ = {
 			isa = PBXGroup;
 			children = (
+				90268F231C6DDBCE002B657E /* DB Heavent Li v3.2.ttf */,
 				9019032B1C6DADB800B6269D /* InspectableLabel.swift */,
 				901903191C6DADAF00B6269D /* AppDelegate.swift */,
 				9019031B1C6DADAF00B6269D /* ViewController.swift */,
@@ -126,6 +129,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				901903241C6DADAF00B6269D /* LaunchScreen.storyboard in Resources */,
+				90268F241C6DDBD1002B657E /* DB Heavent Li v3.2.ttf in Resources */,
 				901903211C6DADAF00B6269D /* Assets.xcassets in Resources */,
 				9019031F1C6DADAF00B6269D /* Main.storyboard in Resources */,
 			);
@@ -290,6 +294,7 @@
 				9019032A1C6DADAF00B6269D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

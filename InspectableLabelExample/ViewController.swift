@@ -14,11 +14,12 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var ความสูง: NSLayoutConstraint!
     
+    @IBOutlet weak var ความกว้าง: NSLayoutConstraint!
+    
     @IBOutlet weak var secndLbl: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
         // Do any additional setup after loading the view, typically from a nib.
         
     }
@@ -29,7 +30,8 @@ class ViewController: UIViewController {
     }
 
     @IBAction func manualUpdate(sender: AnyObject) {
-
+        ความสูง.constant = label.attributedText!.boundingRectWithSize(CGSize(width: ความกว้าง.constant, height: CGFloat.max), options: [.UsesLineFragmentOrigin,.UsesFontLeading], context: nil).height
+        print(ความสูง.constant)
     }
 
 }

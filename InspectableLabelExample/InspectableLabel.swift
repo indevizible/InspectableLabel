@@ -65,7 +65,7 @@ public class InspectableLabel: UILabel {
             attributedText = NSAttributedString(string: text, attributes:attr)
         }
         
-        attributedText?.drawInRect(CGRect(origin: CGPoint(x: 0, y: font.ascender - font.capHeight), size: frame.size))
+        attributedText?.drawInRect(CGRect(origin: CGPoint(x: 0, y: -lineSpacing + font.pointSize), size: frame.size))
         
     }
     

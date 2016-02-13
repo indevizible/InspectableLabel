@@ -34,5 +34,16 @@ class ViewController: UIViewController {
         print(ความสูง.constant)
     }
 
+    @IBAction func increment(sender: AnyObject) {
+        label.lineSpacing++
+        ความสูง.constant = label.attributedText!.boundingRectWithSize(CGSize(width: ความกว้าง.constant, height: CGFloat.max), options: [.UsesLineFragmentOrigin,.UsesFontLeading], context: nil).height
+        print(ความสูง.constant)
+    }
+    
+    @IBAction func decrement(sender: AnyObject) {
+        label.lineSpacing--
+        ความสูง.constant = label.attributedText!.boundingRectWithSize(CGSize(width: ความกว้าง.constant, height: CGFloat.max), options: [.UsesLineFragmentOrigin,.UsesFontLeading], context: nil).height
+        print(ความสูง.constant)
+    }
 }
 

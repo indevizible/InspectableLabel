@@ -19,6 +19,8 @@ import UIKit
 @IBDesignable
 public class InspectableLabel: UILabel {
     
+    public var truncateLastVisibleLine:Bool = true
+    
     @IBInspectable
     public var charSpacing: CGFloat = 0.0 {
         didSet {
@@ -67,22 +69,28 @@ public class InspectableLabel: UILabel {
         
         paragraph.paragraphSpacingBefore = paragraphSpacing
         
+        paragraph.lineBreakMode = lineBreakMode
 
         var attr = [NSFontAttributeName:font,
             NSParagraphStyleAttributeName: paragraph,
             NSForegroundColorAttributeName: textColor
         ]
         
-
         attr[NSKernAttributeName] = charSpacing
         
         if let text = text {
             attributedText = NSAttributedString(string: text, attributes:attr)
         }
         
+        var options:NSStringDrawingOptions = [.UsesLineFragmentOrigin,.UsesFontLeading]
+        if truncateLastVisibleLine {
+            options.insert(.TruncatesLastVisibleLine)
+        }
         
-        attributedText?.drawWithRect(CGRect(origin: CGPoint(x: 0, y: yDrawingSpace), size: CGSize(width: frame.width, height: CGFloat.max)), options: [.UsesLineFragmentOrigin,.UsesFontLeading], context: nil)
-        
+        attributedText?.drawWithRect(CGRect(origin: CGPoint(x: 0, y: yDrawingSpace),
+            size: CGSize(width: frame.width, height: ceil(frame.height - yDrawingSpace))),
+            options: options,
+            context: nil)
     }
     
     var yDrawingSpace: CGFloat {

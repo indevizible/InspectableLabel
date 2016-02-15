@@ -4,11 +4,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <mutableArray key="DB Heavent Li v3.2.ttf">
-            <string>DBHeaventt-Light</string>
-        </mutableArray>
-    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -36,16 +31,14 @@
                                     <constraint firstAttribute="height" constant="202" id="D1x-5i-6XV"/>
                                     <constraint firstAttribute="width" constant="189" id="Fzm-mO-Gmm"/>
                                 </constraints>
-                                <string key="text">Sean Penn Reportedly
-"Under Investigation" 
-for El Chapo Interview</string>
-                                <fontDescription key="fontDescription" name="DBHeaventt-Light" family="DB Heavent" pointSize="26"/>
+                                <string key="text">From the illustration, we can see that ascender is the distance from the baseline to the top of the label, and capHeight is the distance from the baseline to the tops of capital letters. </string>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="19"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="lineSpacing">
-                                        <real key="value" value="25"/>
+                                        <real key="value" value="40"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
@@ -63,11 +56,37 @@ for El Chapo Interview</string>
                                     <action selector="decrement:" destination="BYZ-38-t0r" eventType="touchUpInside" id="B45-46-Ymb"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zFo-Db-9cR">
+                                <rect key="frame" x="290" y="66" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="cQk-cv-ywz"/>
+                                    <constraint firstAttribute="width" constant="46" id="tty-4t-YCe"/>
+                                </constraints>
+                                <state key="normal" title="+"/>
+                                <connections>
+                                    <action selector="incLineSpace:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iiD-hl-qIu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vK7-i3-BfV">
+                                <rect key="frame" x="290" y="104" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="LUI-xC-Noo"/>
+                                    <constraint firstAttribute="height" constant="30" id="QWD-x2-dFj"/>
+                                </constraints>
+                                <state key="normal" title="-"/>
+                                <connections>
+                                    <action selector="decLineSpace:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qqu-88-yuF"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="zFo-Db-9cR" firstAttribute="leading" secondItem="V7j-4I-vOT" secondAttribute="trailing" constant="8" id="1gi-mr-TbX"/>
+                            <constraint firstItem="vK7-i3-BfV" firstAttribute="top" secondItem="zFo-Db-9cR" secondAttribute="bottom" constant="8" id="49F-kw-lTi"/>
+                            <constraint firstItem="zFo-Db-9cR" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="46" id="DYV-K3-R8m"/>
                             <constraint firstItem="V7j-4I-vOT" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="bhx-cl-V9Q"/>
                             <constraint firstItem="V7j-4I-vOT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sm8-go-GTE"/>
+                            <constraint firstItem="vK7-i3-BfV" firstAttribute="leading" secondItem="V7j-4I-vOT" secondAttribute="trailing" constant="8" id="uKp-LL-64J"/>
                         </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

@@ -16,6 +16,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var ความกว้าง: NSLayoutConstraint!
     
+    var fontSize: CGFloat = 35
+    
     @IBOutlet weak var secndLbl: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,15 +37,29 @@ class ViewController: UIViewController {
     }
 
     @IBAction func increment(sender: AnyObject) {
-        label.lineSpacing++
-        ความสูง.constant = label.attributedText!.boundingRectWithSize(CGSize(width: ความกว้าง.constant, height: CGFloat.max), options: [.UsesLineFragmentOrigin,.UsesFontLeading], context: nil).height
-        print(ความสูง.constant)
+        label.font = label.font.fontWithSize(label.font.pointSize + 0.2)
+        updateViewConstraints()
     }
     
     @IBAction func decrement(sender: AnyObject) {
-        label.lineSpacing--
-        ความสูง.constant = label.attributedText!.boundingRectWithSize(CGSize(width: ความกว้าง.constant, height: CGFloat.max), options: [.UsesLineFragmentOrigin,.UsesFontLeading], context: nil).height
-        print(ความสูง.constant)
+        label.font = label.font.fontWithSize(label.font.pointSize - 0.2)
+        updateViewConstraints()
     }
+    
+    @IBAction func incLineSpace(sender: UIButton) {
+        label.lineSpacing++
+        updateViewConstraints()
+    }
+    
+    @IBAction func decLineSpace(sender: UIButton) {
+        label.lineSpacing--
+        updateViewConstraints()
+    }
+    
+    override func updateViewConstraints() {
+        super.updateViewConstraints()
+        ความสูง.constant = label.boundingSizeWithSize(CGSize(width: ความกว้าง.constant, height: CGFloat.max)).height
+    }
+    
 }
 

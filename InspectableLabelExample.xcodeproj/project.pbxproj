@@ -14,6 +14,7 @@
 		901903241C6DADAF00B6269D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 901903221C6DADAF00B6269D /* LaunchScreen.storyboard */; };
 		9019032C1C6DADB800B6269D /* InspectableLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9019032B1C6DADB800B6269D /* InspectableLabel.swift */; };
 		90268F241C6DDBD1002B657E /* DB Heavent Li v3.2.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 90268F231C6DDBCE002B657E /* DB Heavent Li v3.2.ttf */; };
+		9038B0661C70BA0E002CF591 /* Structure.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9038B0651C70B338002CF591 /* Structure.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		901903251C6DADAF00B6269D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9019032B1C6DADB800B6269D /* InspectableLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InspectableLabel.swift; sourceTree = "<group>"; };
 		90268F231C6DDBCE002B657E /* DB Heavent Li v3.2.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DB Heavent Li v3.2.ttf"; sourceTree = "<group>"; };
+		9038B0651C70B338002CF591 /* Structure.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Structure.otf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		901903181C6DADAF00B6269D /* InspectableLabelExample */ = {
 			isa = PBXGroup;
 			children = (
+				9038B0651C70B338002CF591 /* Structure.otf */,
 				90268F231C6DDBCE002B657E /* DB Heavent Li v3.2.ttf */,
 				9019032B1C6DADB800B6269D /* InspectableLabel.swift */,
 				901903191C6DADAF00B6269D /* AppDelegate.swift */,
@@ -130,6 +133,7 @@
 			files = (
 				901903241C6DADAF00B6269D /* LaunchScreen.storyboard in Resources */,
 				90268F241C6DDBD1002B657E /* DB Heavent Li v3.2.ttf in Resources */,
+				9038B0661C70BA0E002CF591 /* Structure.otf in Resources */,
 				901903211C6DADAF00B6269D /* Assets.xcassets in Resources */,
 				9019031F1C6DADAF00B6269D /* Main.storyboard in Resources */,
 			);

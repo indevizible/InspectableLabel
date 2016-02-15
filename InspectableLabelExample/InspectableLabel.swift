@@ -40,9 +40,9 @@ public class InspectableLabel: UILabel {
         updateView()
     }
     
+    var paragraph = NSMutableParagraphStyle()
+    
     public func updateView() {
-        
-        let paragraph = NSMutableParagraphStyle()
         
         paragraph.alignment = textAlignment
 
@@ -65,8 +65,25 @@ public class InspectableLabel: UILabel {
             attributedText = NSAttributedString(string: text, attributes:attr)
         }
         
-        attributedText?.drawInRect(CGRect(origin: CGPoint(x: 0, y: -lineSpacing + font.pointSize), size: frame.size))
+        
+        attributedText?.drawWithRect(CGRect(origin: CGPoint(x: 0, y: -lineSpacing + font.pointSize + (font.capHeight - font.xHeight)), size: CGSize(width: frame.width, height: CGFloat.max)), options: [.UsesLineFragmentOrigin,.UsesFontLeading], context: nil)
         
     }
     
+}
+
+extension InspectableLabel {
+    func boundingSizeWithSize(size: CGSize) -> CGSize {
+        guard let attributedText = attributedText else {
+            return CGSizeZero
+        }
+        let calcSize = attributedText.boundingRectWithSize(size,
+            options: [.UsesLineFragmentOrigin,.UsesFontLeading],
+            context: nil)
+        
+        return CGSize(
+            width: ceil(calcSize.width),
+            height: ceil(calcSize.height - (paragraph.minimumLineHeight) + font.pointSize - font.descender)
+        )
+    }
 }

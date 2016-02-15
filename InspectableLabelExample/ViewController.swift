@@ -32,7 +32,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func manualUpdate(sender: AnyObject) {
-        ความสูง.constant = label.attributedText!.boundingRectWithSize(CGSize(width: ความกว้าง.constant, height: CGFloat.max), options: [.UsesLineFragmentOrigin,.UsesFontLeading], context: nil).height
+        updateViewConstraints()
         print(ความสูง.constant)
     }
 

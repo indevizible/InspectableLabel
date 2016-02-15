@@ -119,7 +119,7 @@ public class InspectableLabel: UILabel {
 
 extension NSAttributedString {
     
-    func in_boundingSizeWithSize(size: CGSize) -> CGSize {
+    public func in_boundingSizeWithSize(size: CGSize) -> CGSize {
         let pointer = NSRangePointer()
         guard let   paragraph = attribute(NSParagraphStyleAttributeName, atIndex: 0, effectiveRange: pointer) as? NSParagraphStyle,
                     font = attribute(NSFontAttributeName, atIndex: 0, effectiveRange: pointer) as? UIFont else {
@@ -136,7 +136,7 @@ extension NSAttributedString {
 
 extension String {
     
-    func in_boundingSizeWithSize(size: CGSize,
+    public func in_boundingSizeWithSize(size: CGSize,
         font: UIFont,
         lineSpacing: CGFloat? = nil,
         charSpacing:CGFloat? = nil,

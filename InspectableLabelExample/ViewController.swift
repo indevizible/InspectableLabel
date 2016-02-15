@@ -26,7 +26,10 @@ class ViewController: UIViewController {
     
     var fontSize: CGFloat = 35
     
-    @IBOutlet weak var secndLbl: UILabel!
+    @IBOutlet weak var secndLbl: InspectableLabel!
+    
+    @IBOutlet weak var secondWidth: NSLayoutConstraint!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -66,7 +69,13 @@ class ViewController: UIViewController {
     
     override func updateViewConstraints() {
         super.updateViewConstraints()
-        ความสูง.constant = label.boundingSizeWithSize(CGSize(width: ความกว้าง.constant, height: CGFloat.max)).height
+        ความสูง.constant = label.sizeThatFits(CGSize(width: ความกว้าง.constant, height: CGFloat.max)).height
+        secondWidth.constant = secndLbl.sizeThatFits(CGSize(width: CGFloat.max, height: secndLbl.frame.height)).width
+    }
+
+    @IBAction func changedFontSize(sender: UISlider) {
+        secndLbl.font = secndLbl.font.fontWithSize(CGFloat(sender.value))
+        updateViewConstraints()
     }
     
 }

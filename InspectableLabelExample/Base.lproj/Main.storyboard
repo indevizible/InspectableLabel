@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -78,28 +79,63 @@
                                     <action selector="decLineSpace:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qqu-88-yuF"/>
                                 </connections>
                             </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="19" minValue="1" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="9XX-kY-x6h">
+                                <rect key="frame" x="14" y="523" width="347" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Tl0-3N-ABb"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="changedFontSize:" destination="BYZ-38-t0r" eventType="valueChanged" id="7b8-nV-iu2"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eiq-gZ-q70" customClass="InspectableLabel" customModule="InspectableLabelExample" customModuleProvider="target">
+                                <rect key="frame" x="16" y="561" width="189" height="80"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="Ecu-vG-jn1"/>
+                                    <constraint firstAttribute="width" constant="189" id="jii-Na-lxl"/>
+                                </constraints>
+                                <string key="text">From the illustration, 
+we can see that ascender is</string>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="19"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="lineSpacing">
+                                        <real key="value" value="40"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="zFo-Db-9cR" firstAttribute="leading" secondItem="V7j-4I-vOT" secondAttribute="trailing" constant="8" id="1gi-mr-TbX"/>
                             <constraint firstItem="vK7-i3-BfV" firstAttribute="top" secondItem="zFo-Db-9cR" secondAttribute="bottom" constant="8" id="49F-kw-lTi"/>
                             <constraint firstItem="zFo-Db-9cR" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="46" id="DYV-K3-R8m"/>
+                            <constraint firstItem="9XX-kY-x6h" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Eh0-sz-89A"/>
+                            <constraint firstItem="eiq-gZ-q70" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="T9g-39-Pon"/>
                             <constraint firstItem="V7j-4I-vOT" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="bhx-cl-V9Q"/>
+                            <constraint firstItem="9XX-kY-x6h" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="dqb-VN-b2Q"/>
                             <constraint firstItem="V7j-4I-vOT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sm8-go-GTE"/>
                             <constraint firstItem="vK7-i3-BfV" firstAttribute="leading" secondItem="V7j-4I-vOT" secondAttribute="trailing" constant="8" id="uKp-LL-64J"/>
+                            <constraint firstItem="eiq-gZ-q70" firstAttribute="top" secondItem="9XX-kY-x6h" secondAttribute="bottom" constant="8" id="upg-e8-jh3"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="eiq-gZ-q70" secondAttribute="bottom" constant="26" id="zqL-nV-LTZ"/>
                         </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="667"/>
                     <connections>
                         <outlet property="label" destination="V7j-4I-vOT" id="M9F-Zs-dUl"/>
+                        <outlet property="secndLbl" destination="eiq-gZ-q70" id="qp9-2y-bU6"/>
+                        <outlet property="secondWidth" destination="jii-Na-lxl" id="BRF-m6-Iip"/>
                         <outlet property="ความกว้าง" destination="Fzm-mO-Gmm" id="Vzs-oM-cEn"/>
                         <outlet property="ความสูง" destination="D1x-5i-6XV" id="lYj-1y-aRF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="340" y="429"/>
+            <point key="canvasLocation" x="339.5" y="428.5"/>
         </scene>
     </scenes>
 </document>

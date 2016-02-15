@@ -7,6 +7,10 @@
 
 ## Features
 - [x] Custom font
+- [x] charSpacing
+- [x] lineSpacing
+- [x] paragraphSpacing
+- [x] size Calculating extension
 
 ## Requirements
 - Swift 2+

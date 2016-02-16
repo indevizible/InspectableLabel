@@ -1,5 +1,5 @@
 # InspectableLabel
-[![Cocoapods Compatible](https://img.shields.io/cocoapods/v/InspectableLabel.svg)](https://img.shields.io/cocoapods/v/InspectableLabel.svg)
+[![CocoaPods Compatible](https://img.shields.io/cocoapods/v/InspectableLabel.svg)](https://img.shields.io/cocoapods/v/InspectableLabel.svg)
 [![GitHub license](https://img.shields.io/badge/license-Apache 2.0-lightgrey.svg)](https://raw.githubusercontent.com/indevizible/InspectableLabel/master/LICENSE)
 [![Platform](https://img.shields.io/cocoapods/p/InspectableLabel.svg?style=flat)](http://cocoadocs.org/docsets/InspectableLabel)
 [![Twitter](https://img.shields.io/badge/twitter-@indevizible-blue.svg?style=flat)](http://twitter.com/indevizible)
